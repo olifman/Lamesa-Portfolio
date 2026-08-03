@@ -1,0 +1,48 @@
+{
+  "name": "Lamesa Bekele | SWE & Full-Stack Developer",
+  "short_name": "Lamesa Bekele",
+  "description": "Hey! I'm Lamesa Bekele, a Software Engineering student & Full-Stack Developer crafting high-performance web & app solutions with Laravel, JavaScript, and AI.",
+  "lang": "en",
+  "start_url": "/",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "assets/images/favicon/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/images/favicon/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "display": "standalone",
+  "orientation": "portrait",
+  "categories": [
+    "portfolio",
+    "software engineer",
+    "full-stack developer",
+    "dark theme",
+    "neon green",
+    "neon blue",
+    "technology",
+    "AI",
+    "web development",
+    "modern ui",
+    "immersive",
+    "creative",
+    "interactive",
+    "next-gen",
+    "personal brand",
+    "3d",
+    "animation",
+    "progressive web app"
+  ]
+}
+
+

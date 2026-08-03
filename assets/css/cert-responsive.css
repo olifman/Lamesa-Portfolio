@@ -1,0 +1,96 @@
+@media (max-width: 960px) {
+  .cert-magazine-scene {
+    overflow: visible;
+  }
+}
+
+@media (max-width: 600px) {
+  .book-ground-shadow {
+    display: none;
+  }
+
+  .cert-magazine-scene {
+    padding: 10px 0 0;
+    overflow: hidden;
+  }
+
+  #certMagazine {
+    margin-inline: auto;
+  }
+
+  .cert-main-img {
+    max-height: 270px;
+  }
+
+  .cert-main-img[data-cert-category="linkedin"],
+  .cert-main-img[data-cert-category="hackerrank"] {
+    max-height: 180px;
+  }
+
+  .cert-page.page-combined .cert-img-frame {
+    max-height: 48%;
+  }
+
+  .cert-img-frame[data-cert-category="linkedin"],
+  .cert-img-frame[data-cert-category="hackerrank"] {
+    max-height: 40%;
+  }
+
+  .cert-main-img[data-cert-category="linkedin"],
+  .cert-main-img[data-cert-category="hackerrank"] {
+    max-height: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  .page-inner {
+    padding: 1rem 0.9rem;
+  }
+
+  .cert-title-text {
+    font-size: 0.85rem;
+  }
+
+  .cert-page.page-combined .page-inner {
+    padding: 0.95rem 0.85rem;
+  }
+
+  .cert-page.page-combined .cert-title-text {
+    font-size: 0.8rem;
+  }
+
+  .cert-page.page-combined .cert-issuer-name {
+    font-size: 0.68rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .cert-main-img {
+    max-height: 240px;
+  }
+
+  .cert-main-img[data-cert-category="linkedin"],
+  .cert-main-img[data-cert-category="hackerrank"] {
+    max-height: 150px;
+  }
+
+  .cert-page.page-combined .cert-img-frame {
+    max-height: 44%;
+  }
+
+  .cert-img-frame[data-cert-category="linkedin"],
+  .cert-img-frame[data-cert-category="hackerrank"] {
+    max-height: 36%;
+  }
+
+  .cert-main-img[data-cert-category="linkedin"],
+  .cert-main-img[data-cert-category="hackerrank"] {
+    max-height: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  .page-inner {
+    padding: 0.9rem 0.75rem;
+  }
+}
