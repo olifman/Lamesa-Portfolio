@@ -26,3 +26,4 @@ Then visit `http://localhost:8000`
 ## Contact
 
 - Email: olifman787@gmail.com
+Updated GitHub Pages deployment
