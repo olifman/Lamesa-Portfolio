@@ -729,143 +729,1885 @@
     </a>
 </li>
     </section>
-    <!-- ================= CERTIFICATES SECTION ================= -->
-<section id="certificates" class="py-5 curtain-reveal">
+  <!-- =========================================================
+     CERTIFICATES SECTION
+     LAMESA BEKELE PORTFOLIO
+     12 CERTIFICATES
+     INTERNAL CSS + JAVASCRIPT
+     ========================================================= -->
+
+<style>
+/* =========================================================
+   CERTIFICATE SECTION
+   ========================================================= */
+
+.lb-cert-section {
+    position: relative;
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.lb-cert-header {
+    max-width: 850px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.lb-cert-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 8px 18px;
+
+    margin-bottom: 18px;
+
+    border: 1px solid rgba(0, 240, 255, 0.35);
+    border-radius: 50px;
+
+    background: rgba(0, 240, 255, 0.06);
+
+    color: #00f0ff;
+
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.lb-cert-header h2 {
+    margin: 0 0 18px;
+
+    color: #ffffff;
+
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+.lb-cert-header h2 span {
+    color: #00f0ff;
+
+    text-shadow:
+        0 0 10px rgba(0, 240, 255, 0.45),
+        0 0 30px rgba(0, 240, 255, 0.15);
+}
+
+.lb-cert-header p {
+    max-width: 720px;
+
+    margin: 0 auto;
+
+    color: rgba(255, 255, 255, 0.62);
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   GRID
+   ========================================================= */
+
+.lb-cert-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 25px;
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.lb-cert-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    min-width: 0;
+
+    border:
+        1px solid rgba(0, 240, 255, 0.16);
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.055),
+            rgba(255, 255, 255, 0.012)
+        );
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.30);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.lb-cert-card:hover {
+    transform: translateY(-8px);
+
+    border-color:
+        rgba(0, 240, 255, 0.60);
+
+    box-shadow:
+        0 22px 55px rgba(0, 0, 0, 0.45),
+        0 0 35px rgba(0, 240, 255, 0.08);
+}
+
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
+.lb-cert-image {
+    position: relative;
+
+    width: 100%;
+    height: 230px;
+
+    overflow: hidden;
+
+    background: #050b10;
+}
+
+.lb-cert-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease;
+}
+
+.lb-cert-card:hover
+.lb-cert-image img {
+    transform: scale(1.05);
+
+    filter: brightness(0.55);
+}
+
+
+/* =========================================================
+   NUMBER
+   ========================================================= */
+
+.lb-cert-number {
+    position: absolute;
+
+    top: 13px;
+    right: 13px;
+
+    z-index: 5;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid rgba(0, 240, 255, 0.55);
+
+    border-radius: 50%;
+
+    background:
+        rgba(2, 10, 15, 0.90);
+
+    color: #00f0ff;
+
+    font-size: 0.70rem;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+   ========================================================= */
+
+.lb-cert-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 4;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 10, 15, 0.95),
+            rgba(0, 10, 15, 0.20)
+        );
+
+    opacity: 0;
+
+    transition:
+        opacity 0.3s ease;
+}
+
+.lb-cert-card:hover
+.lb-cert-overlay {
+    opacity: 1;
+}
+
+
+/* =========================================================
+   VISUALIZE BUTTON
+   ========================================================= */
+
+.lb-cert-view {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    padding: 12px 18px;
+
+    border:
+        1px solid #00f0ff;
+
+    border-radius: 8px;
+
+    background:
+        rgba(0, 240, 255, 0.08);
+
+    color: #ffffff;
+
+    font-size: 0.73rem;
+    font-weight: 700;
+
+    letter-spacing: 0.6px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.lb-cert-view:hover {
+    background: #00f0ff;
+
+    color: #001014;
+
+    transform: scale(1.05);
+
+    box-shadow:
+        0 0 25px rgba(0, 240, 255, 0.50);
+}
+
+
+/* =========================================================
+   CARD BODY
+   ========================================================= */
+
+.lb-cert-body {
+    display: flex;
+
+    flex: 1;
+
+    flex-direction: column;
+
+    padding: 20px;
+}
+
+.lb-cert-body h3 {
+    margin: 0 0 10px;
+
+    color: #ffffff;
+
+    font-size: 0.95rem;
+    font-weight: 700;
+
+    line-height: 1.5;
+}
+
+.lb-cert-body p {
+    margin: 0;
+
+    color:
+        rgba(255, 255, 255, 0.55);
+
+    font-size: 0.74rem;
+
+    line-height: 1.65;
+}
+
+.lb-cert-type {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-top: auto;
+    padding-top: 15px;
+
+    color: #00f0ff;
+
+    font-size: 0.65rem;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   MODAL
+   ========================================================= */
+
+.lb-cert-modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 999999;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px;
+
+    background:
+        rgba(0, 0, 0, 0.96);
+
+    backdrop-filter: blur(12px);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+.lb-cert-modal.active {
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+}
+
+
+/* =========================================================
+   MODAL BOX
+   ========================================================= */
+
+.lb-cert-modal-box {
+    width: min(1250px, 96vw);
+
+    height: min(94vh, 900px);
+
+    display: flex;
+
+    flex-direction: column;
+
+    overflow: hidden;
+
+    border:
+        1px solid rgba(0, 240, 255, 0.35);
+
+    border-radius: 16px;
+
+    background: #050b10;
+
+    box-shadow:
+        0 0 80px rgba(0, 240, 255, 0.10),
+        0 30px 100px rgba(0, 0, 0, 0.80);
+
+    transform: scale(0.94);
+
+    transition:
+        transform 0.3s ease;
+}
+
+.lb-cert-modal.active
+.lb-cert-modal-box {
+    transform: scale(1);
+}
+
+
+/* =========================================================
+   MODAL HEADER
+   ========================================================= */
+
+.lb-cert-modal-header {
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 15px 20px;
+
+    border-bottom:
+        1px solid rgba(0, 240, 255, 0.14);
+}
+
+.lb-cert-modal-heading {
+    min-width: 0;
+}
+
+.lb-cert-modal-heading small {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #00f0ff;
+
+    font-size: 0.60rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+.lb-cert-modal-heading h3 {
+    margin: 0;
+
+    overflow: hidden;
+
+    color: #ffffff;
+
+    font-size: 1.05rem;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+   ========================================================= */
+
+.lb-cert-close {
+    flex-shrink: 0;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.16);
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.04);
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.lb-cert-close:hover {
+    transform: rotate(90deg);
+
+    color: #ff4d6d;
+
+    border-color: #ff4d6d;
+}
+
+
+/* =========================================================
+   MODAL IMAGE AREA
+   ========================================================= */
+
+.lb-cert-modal-content {
+    flex: 1;
+
+    min-height: 0;
+
+    overflow: auto;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(0, 240, 255, 0.05),
+            transparent 70%
+        );
+}
+
+.lb-cert-modal-content img {
+    display: block;
+
+    max-width: 100%;
+    max-height: 100%;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        0 20px 70px rgba(0, 0, 0, 0.65);
+}
+
+
+/* =========================================================
+   MODAL FOOTER
+   ========================================================= */
+
+.lb-cert-modal-footer {
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 12px 18px;
+
+    border-top:
+        1px solid rgba(0, 240, 255, 0.14);
+}
+
+.lb-cert-owner {
+    color:
+        rgba(255, 255, 255, 0.55);
+
+    font-size: 0.72rem;
+}
+
+.lb-cert-owner i {
+    margin-right: 6px;
+
+    color: #00f0ff;
+}
+
+
+/* =========================================================
+   OPEN FULL IMAGE
+   ========================================================= */
+
+.lb-cert-full {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 8px 13px;
+
+    border:
+        1px solid rgba(0, 240, 255, 0.35);
+
+    border-radius: 7px;
+
+    background: transparent;
+
+    color: #00f0ff;
+
+    cursor: pointer;
+
+    font-size: 0.70rem;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+.lb-cert-full:hover {
+    background: #00f0ff;
+
+    color: #001014;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1199px) {
+
+    .lb-cert-grid {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================================
+   SMALL TABLET
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .lb-cert-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 575px) {
+
+    .lb-cert-section {
+        padding: 75px 0;
+    }
+
+    .lb-cert-grid {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .lb-cert-image {
+        height: 250px;
+    }
+
+    .lb-cert-overlay {
+        opacity: 1;
+
+        align-items: flex-end;
+
+        background:
+            linear-gradient(
+                to top,
+                rgba(0, 10, 15, 0.95),
+                transparent 70%
+            );
+    }
+
+    .lb-cert-modal {
+        padding: 7px;
+    }
+
+    .lb-cert-modal-box {
+        width: 100%;
+        height: 96vh;
+
+        border-radius: 12px;
+    }
+
+    .lb-cert-modal-content {
+        padding: 10px;
+    }
+
+    .lb-cert-modal-footer {
+        flex-direction: column;
+
+        justify-content: center;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .lb-cert-card,
+    .lb-cert-image img,
+    .lb-cert-overlay,
+    .lb-cert-view,
+    .lb-cert-modal,
+    .lb-cert-modal-box,
+    .lb-cert-close {
+        transition: none !important;
+    }
+
+}
+
+</style>
+
+
+<!-- =========================================================
+     CERTIFICATES HTML
+     ========================================================= -->
+
+<section
+    id="certificates"
+    class="lb-cert-section curtain-reveal"
+>
+
     <div class="container">
 
-        <div class="text-center mb-5">
-            <h2 class="section-title">My Certificates</h2>
-            <p class="text-secondary">
-                Professional certificates earned through Udacity and online learning.
+
+        <!-- HEADER -->
+
+        <div class="lb-cert-header">
+
+            <div class="lb-cert-label">
+
+                <i class="bi bi-patch-check-fill"></i>
+
+                Verified Learning Achievements
+
+            </div>
+
+
+            <h2>
+                My <span>Certificates</span>
+            </h2>
+
+
+            <p>
+                A collection of certificates earned through
+                technology training, programming, artificial
+                intelligence, data analysis, mobile development,
+                and continuous learning.
             </p>
+
         </div>
 
-        <div class="row g-4">
 
-            <!-- Android -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card h-100 shadow-lg border-0 bg-dark text-center">
-                    <img src="assets/images/certificates/android.jpg"
-                         class="card-img-top"
-                         style="height:220px;object-fit:cover;">
+        <!-- =================================================
+             12 CERTIFICATES
+             ================================================= -->
 
-                    <div class="card-body">
+        <div class="lb-cert-grid">
 
-                        <h5 class="text-info">
-                            Android Development
-                        </h5>
 
-                        <p class="text-light small">
-                            Udacity Certificate
-                        </p>
+            <!-- =================================================
+                 CERTIFICATE 01
+                 ================================================= -->
 
-                        <a href="assets/images/certificates/android.jpg"
-                           target="_blank"
-                           class="btn btn-primary w-100">
-                           View Certificate
-                        </a>
+            <article class="lb-cert-card">
 
-                    </div>
-                </div>
-            </div>
+                <div class="lb-cert-image">
 
-            <!-- AI -->
+                    <img
+                        src="assets/images/certificates/android.jpg"
+                        alt="Android Development Certificate"
+                        loading="lazy"
+                    >
 
-            <div class="col-md-6 col-lg-3">
+                    <span class="lb-cert-number">
+                        01
+                    </span>
 
-                <div class="card h-100 shadow-lg border-0 bg-dark text-center">
+                    <div class="lb-cert-overlay">
 
-                    <img src="assets/images/certificates/ai.jpg"
-                         class="card-img-top"
-                         style="height:220px;object-fit:cover;">
+                        <button
+                            type="button"
+                            class="lb-cert-view"
+                            data-image="assets/images/certificates/android.jpg"
+                            data-title="Android Development"
+                        >
 
-                    <div class="card-body">
+                            <i class="bi bi-eye-fill"></i>
 
-                        <h5 class="text-success">
-                            Artificial Intelligence
-                        </h5>
+                            Visualize Certificate
 
-                        <p class="text-light small">
-                            Udacity Certificate
-                        </p>
-
-                        <a href="assets/images/certificates/ai.jpg"
-                           target="_blank"
-                           class="btn btn-success w-100">
-                           View Certificate
-                        </a>
+                        </button>
 
                     </div>
+
                 </div>
 
-            </div>
 
-            <!-- Data Analysis -->
+                <div class="lb-cert-body">
 
-            <div class="col-md-6 col-lg-3">
+                    <h3>
+                        Android Development
+                    </h3>
 
-                <div class="card h-100 shadow-lg border-0 bg-dark text-center">
+                    <p>
+                        Mobile application development
+                        and Android technology.
+                    </p>
 
-                    <img src="assets/images/certificates/data-analysis.jpg"
-                         class="card-img-top"
-                         style="height:220px;object-fit:cover;">
+                    <span class="lb-cert-type">
 
-                    <div class="card-body">
+                        <i class="bi bi-phone-fill"></i>
 
-                        <h5 class="text-warning">
-                            Data Analysis
-                        </h5>
+                        Technology Certificate
 
-                        <p class="text-light small">
-                            Udacity Certificate
-                        </p>
+                    </span>
 
-                        <a href="assets/images/certificates/data-analysis.jpg"
-                           target="_blank"
-                           class="btn btn-warning w-100">
-                           View Certificate
-                        </a>
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 CERTIFICATE 02
+                 ================================================= -->
+
+            <article class="lb-cert-card">
+
+                <div class="lb-cert-image">
+
+                    <img
+                        src="assets/images/certificates/ai.jpg"
+                        alt="Artificial Intelligence Certificate"
+                        loading="lazy"
+                    >
+
+                    <span class="lb-cert-number">
+                        02
+                    </span>
+
+                    <div class="lb-cert-overlay">
+
+                        <button
+                            type="button"
+                            class="lb-cert-view"
+                            data-image="assets/images/certificates/ai.jpg"
+                            data-title="Artificial Intelligence"
+                        >
+
+                            <i class="bi bi-eye-fill"></i>
+
+                            Visualize Certificate
+
+                        </button>
 
                     </div>
+
                 </div>
 
-            </div>
 
-            <!-- Programming -->
+                <div class="lb-cert-body">
 
-            <div class="col-md-6 col-lg-3">
+                    <h3>
+                        Artificial Intelligence
+                    </h3>
 
-                <div class="card h-100 shadow-lg border-0 bg-dark text-center">
+                    <p>
+                        Artificial intelligence and
+                        modern technology learning.
+                    </p>
 
-                    <img src="assets/images/certificates/programming.jpg"
-                         class="card-img-top"
-                         style="height:220px;object-fit:cover;">
+                    <span class="lb-cert-type">
 
-                    <div class="card-body">
+                        <i class="bi bi-cpu-fill"></i>
 
-                        <h5 class="text-danger">
-                            Programming Fundamentals
-                        </h5>
+                        AI Certificate
 
-                        <p class="text-light small">
-                            Udacity Certificate
-                        </p>
+                    </span>
 
-                        <a href="assets/images/certificates/programming.jpg"
-                           target="_blank"
-                           class="btn btn-danger w-100">
-                           View Certificate
-                        </a>
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 CERTIFICATE 03
+                 ================================================= -->
+
+            <article class="lb-cert-card">
+
+                <div class="lb-cert-image">
+
+                    <img
+                        src="assets/images/certificates/data-analysis.jpg"
+                        alt="Data Analysis Certificate"
+                        loading="lazy"
+                    >
+
+                    <span class="lb-cert-number">
+                        03
+                    </span>
+
+                    <div class="lb-cert-overlay">
+
+                        <button
+                            type="button"
+                            class="lb-cert-view"
+                            data-image="assets/images/certificates/data-analysis.jpg"
+                            data-title="Data Analysis"
+                        >
+
+                            <i class="bi bi-eye-fill"></i>
+
+                            Visualize Certificate
+
+                        </button>
 
                     </div>
+
                 </div>
 
-            </div>
+
+                <div class="lb-cert-body">
+
+                    <h3>
+                        Data Analysis
+                    </h3>
+
+                    <p>
+                        Data analysis and analytical
+                        skills development.
+                    </p>
+
+                    <span class="lb-cert-type">
+
+                        <i class="bi bi-bar-chart-fill"></i>
+
+                        Data Certificate
+
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 CERTIFICATE 04
+                 ================================================= -->
+
+            <article class="lb-cert-card">
+
+                <div class="lb-cert-image">
+
+                    <img
+                        src="assets/images/certificates/programming.jpg"
+                        alt="Programming Certificate"
+                        loading="lazy"
+                    >
+
+                    <span class="lb-cert-number">
+                        04
+                    </span>
+
+                    <div class="lb-cert-overlay">
+
+                        <button
+                            type="button"
+                            class="lb-cert-view"
+                            data-image="assets/images/certificates/programming.jpg"
+                            data-title="Programming"
+                        >
+
+                            <i class="bi bi-eye-fill"></i>
+
+                            Visualize Certificate
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="lb-cert-body">
+
+                    <h3>
+                        Programming
+                    </h3>
+
+                    <p>
+                        Programming fundamentals and
+                        software development.
+                    </p>
+
+                    <span class="lb-cert-type">
+
+                        <i class="bi bi-code-slash"></i>
+
+                        Programming Certificate
+
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 CERTIFICATE 05
+                 ================================================= -->
+
+            <article class="lb-cert-card">
+
+                <div class="lb-cert-image">
+
+                    <img
+                        src="assets/images/certificates/student-system.png"
+                        alt="Student Management System Certificate"
+                        loading="lazy"
+                    >
+
+                    <span class="lb-cert-number">
+                        05
+                    </span>
+
+                    <div class="lb-cert-overlay">
+
+                        <button
+                            type="button"
+                            class="lb-cert-view"
+                            data-image="assets/images/certificates/student-system.png"
+                            data-title="Student Management System"
+                        >
+
+                            <i class="bi bi-eye-fill"></i>
+
+                            Visualize Certificate
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="lb-cert-body">
+
+                    <h3>
+                        Student Management System
+                    </h3>
+
+                    <p>
+                        Software development and
+                        student management system.
+                    </p>
+
+                    <span class="lb-cert-type">
+
+                        <i class="bi bi-mortarboard-fill"></i>
+
+                        Software Development
+
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 CERTIFICATE 06
+                 ================================================= -->
+
+            <article class="lb-cert-card">
+
+                <div class="lb-cert-image">
+
+                    <img
+                        src="assets/images/certificates/certificate-1.png"
+                        alt="How to Study Effectively Certificate"
+                        loading="lazy"
+                    >
+
+                    <span class="lb-cert-number">
+                        06
+                    </span>
+
+                    <div class="lb-cert-overlay">
+
+                        <button
+                            type="button"
+                            class="lb-cert-view"
+                            data-image="assets/images/certificates/certificate-1.png"
+                            data-title="How to Study Effectively"
+                        >
+
+                            <i class="bi bi-eye-fill"></i>
+
+                            Visualize Certificate
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="lb-cert-body">
+
+                    <h3>
+                        How to Study Effectively
+                    </h3>
+
+                    <p>
+                        Learning and effective study
+                        skills development.
+                    </p>
+
+                    <span class="lb-cert-type">
+
+                        <i class="bi bi-book-fill"></i>
+
+                        Learning Certificate
+
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 CERTIFICATE 07
+                 ================================================= -->
+
+            <article class="lb-cert-card">
+
+                <div class="lb-cert-image">
+
+                    <img
+                        src="assets/images/certificates/certificate-2.png"
+                        alt="How to Evaluate Resources Certificate"
+                        loading="lazy"
+                    >
+
+                    <span class="lb-cert-number">
+                        07
+                    </span>
+
+                    <div class="lb-cert-overlay">
+
+                        <button
+                            type="button"
+                            class="lb-cert-view"
+                            data-image="assets/images/certificates/certificate-2.png"
+                            data-title="How to Evaluate Resources"
+                        >
+
+                            <i class="bi bi-eye-fill"></i>
+
+                            Visualize Certificate
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="lb-cert-body">
+
+                    <h3>
+                        How to Evaluate Resources
+                    </h3>
+
+                    <p>
+                        Evaluating learning resources
+                        and information.
+                    </p>
+
+                    <span class="lb-cert-type">
+
+                        <i class="bi bi-search"></i>
+
+                        Learning Certificate
+
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 CERTIFICATE 08
+                 ================================================= -->
+
+            <article class="lb-cert-card">
+
+                <div class="lb-cert-image">
+
+                    <img
+                        src="assets/images/certificates/certificate-3.png"
+                        alt="Strategies for Successful Online Learning Certificate"
+                        loading="lazy"
+                    >
+
+                    <span class="lb-cert-number">
+                        08
+                    </span>
+
+                    <div class="lb-cert-overlay">
+
+                        <button
+                            type="button"
+                            class="lb-cert-view"
+                            data-image="assets/images/certificates/certificate-3.png"
+                            data-title="Strategies for Successful Online Learning"
+                        >
+
+                            <i class="bi bi-eye-fill"></i>
+
+                            Visualize Certificate
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="lb-cert-body">
+
+                    <h3>
+                        Strategies for Successful Online Learning
+                    </h3>
+
+                    <p>
+                        Strategies and skills for
+                        successful online learning.
+                    </p>
+
+                    <span class="lb-cert-type">
+
+                        <i class="bi bi-laptop-fill"></i>
+
+                        Online Learning
+
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 CERTIFICATE 09
+                 ================================================= -->
+
+            <article class="lb-cert-card">
+
+                <div class="lb-cert-image">
+
+                    <img
+                        src="assets/images/certificates/certificate-4.png"
+                        alt="Academic Integrity Certificate"
+                        loading="lazy"
+                    >
+
+                    <span class="lb-cert-number">
+                        09
+                    </span>
+
+                    <div class="lb-cert-overlay">
+
+                        <button
+                            type="button"
+                            class="lb-cert-view"
+                            data-image="assets/images/certificates/certificate-4.png"
+                            data-title="Academic Integrity"
+                        >
+
+                            <i class="bi bi-eye-fill"></i>
+
+                            Visualize Certificate
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="lb-cert-body">
+
+                    <h3>
+                        Academic Integrity
+                    </h3>
+
+                    <p>
+                        Academic integrity and
+                        responsible learning.
+                    </p>
+
+                    <span class="lb-cert-type">
+
+                        <i class="bi bi-award-fill"></i>
+
+                        Academic Certificate
+
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 CERTIFICATE 10
+                 ================================================= -->
+
+            <article class="lb-cert-card">
+
+                <div class="lb-cert-image">
+
+                    <img
+                        src="assets/images/certificates/certificate-5.png"
+                        alt="Keeping Yourself Safe Online Certificate"
+                        loading="lazy"
+                    >
+
+                    <span class="lb-cert-number">
+                        10
+                    </span>
+
+                    <div class="lb-cert-overlay">
+
+                        <button
+                            type="button"
+                            class="lb-cert-view"
+                            data-image="assets/images/certificates/certificate-5.png"
+                            data-title="Keeping Yourself Safe Online"
+                        >
+
+                            <i class="bi bi-eye-fill"></i>
+
+                            Visualize Certificate
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="lb-cert-body">
+
+                    <h3>
+                        Keeping Yourself Safe Online
+                    </h3>
+
+                    <p>
+                        Online safety and digital
+                        awareness.
+                    </p>
+
+                    <span class="lb-cert-type">
+
+                        <i class="bi bi-shield-check"></i>
+
+                        Digital Safety
+
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 CERTIFICATE 11
+                 ================================================= -->
+
+            <article class="lb-cert-card">
+
+                <div class="lb-cert-image">
+
+                    <img
+                        src="assets/images/certificates/certificate-6.png"
+                        alt="How to Take a Course Certificate"
+                        loading="lazy"
+                    >
+
+                    <span class="lb-cert-number">
+                        11
+                    </span>
+
+                    <div class="lb-cert-overlay">
+
+                        <button
+                            type="button"
+                            class="lb-cert-view"
+                            data-image="assets/images/certificates/certificate-6.png"
+                            data-title="How to Take a Course"
+                        >
+
+                            <i class="bi bi-eye-fill"></i>
+
+                            Visualize Certificate
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="lb-cert-body">
+
+                    <h3>
+                        How to Take a Course
+                    </h3>
+
+                    <p>
+                        Effective online course
+                        participation and learning.
+                    </p>
+
+                    <span class="lb-cert-type">
+
+                        <i class="bi bi-play-circle-fill"></i>
+
+                        Course Certificate
+
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 CERTIFICATE 12
+                 ================================================= -->
+
+            <article class="lb-cert-card">
+
+                <div class="lb-cert-image">
+
+                    <img
+                        src="assets/images/certificates/certificate-7.png"
+                        alt="Set Goals to Manage Your Time Certificate"
+                        loading="lazy"
+                    >
+
+                    <span class="lb-cert-number">
+                        12
+                    </span>
+
+                    <div class="lb-cert-overlay">
+
+                        <button
+                            type="button"
+                            class="lb-cert-view"
+                            data-image="assets/images/certificates/certificate-7.png"
+                            data-title="Set Goals to Manage Your Time"
+                        >
+
+                            <i class="bi bi-eye-fill"></i>
+
+                            Visualize Certificate
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="lb-cert-body">
+
+                    <h3>
+                        Set Goals to Manage Your Time
+                    </h3>
+
+                    <p>
+                        Goal setting and effective
+                        time management.
+                    </p>
+
+                    <span class="lb-cert-type">
+
+                        <i class="bi bi-clock-fill"></i>
+
+                        Time Management
+
+                    </span>
+
+                </div>
+
+            </article>
+
 
         </div>
 
     </div>
+
 </section>
+
+
+<!-- =========================================================
+     CERTIFICATE VIEWER / MODAL
+     ========================================================= -->
+
+<div
+    id="lbCertificateModal"
+    class="lb-cert-modal"
+    aria-hidden="true"
+>
+
+    <div class="lb-cert-modal-box">
+
+
+        <!-- MODAL HEADER -->
+
+        <div class="lb-cert-modal-header">
+
+            <div class="lb-cert-modal-heading">
+
+                <small>
+                    Certificate Preview
+                </small>
+
+                <h3 id="lbCertificateTitle">
+                    Certificate
+                </h3>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="lbCertificateClose"
+                class="lb-cert-close"
+                aria-label="Close certificate viewer"
+            >
+
+                <i class="bi bi-x-lg"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- IMAGE -->
+
+        <div class="lb-cert-modal-content">
+
+            <img
+                id="lbCertificateImage"
+                src=""
+                alt="Certificate preview"
+            >
+
+        </div>
+
+
+        <!-- FOOTER -->
+
+        <div class="lb-cert-modal-footer">
+
+            <span class="lb-cert-owner">
+
+                <i class="bi bi-person-check-fill"></i>
+
+                Lamesa Bekele
+
+            </span>
+
+
+            <button
+                type="button"
+                id="lbCertificateFull"
+                class="lb-cert-full"
+            >
+
+                <i class="bi bi-box-arrow-up-right"></i>
+
+                Open Full Image
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     CERTIFICATE JAVASCRIPT
+     ========================================================= -->
+
+<script>
+
+(function () {
+
+    "use strict";
+
+
+    const modal =
+        document.getElementById(
+            "lbCertificateModal"
+        );
+
+
+    const modalImage =
+        document.getElementById(
+            "lbCertificateImage"
+        );
+
+
+    const modalTitle =
+        document.getElementById(
+            "lbCertificateTitle"
+        );
+
+
+    const closeButton =
+        document.getElementById(
+            "lbCertificateClose"
+        );
+
+
+    const fullButton =
+        document.getElementById(
+            "lbCertificateFull"
+        );
+
+
+    let currentImage = "";
+
+
+    /* =====================================================
+       OPEN CERTIFICATE
+       ===================================================== */
+
+    document.addEventListener(
+        "click",
+        function (event) {
+
+            const button =
+                event.target.closest(
+                    ".lb-cert-view"
+                );
+
+
+            if (!button) {
+                return;
+            }
+
+
+            const image =
+                button.getAttribute(
+                    "data-image"
+                );
+
+
+            const title =
+                button.getAttribute(
+                    "data-title"
+                );
+
+
+            if (!image) {
+                return;
+            }
+
+
+            currentImage = image;
+
+
+            modalImage.src =
+                image;
+
+
+            modalImage.alt =
+                title + " certificate";
+
+
+            modalTitle.textContent =
+                title;
+
+
+            modal.classList.add(
+                "active"
+            );
+
+
+            modal.setAttribute(
+                "aria-hidden",
+                "false"
+            );
+
+
+            document.body.style.overflow =
+                "hidden";
+
+        }
+    );
+
+
+    /* =====================================================
+       CLOSE
+       ===================================================== */
+
+    function closeModal() {
+
+        modal.classList.remove(
+            "active"
+        );
+
+
+        modal.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+
+        document.body.style.overflow =
+            "";
+
+
+        setTimeout(
+            function () {
+
+                if (
+                    !modal.classList.contains(
+                        "active"
+                    )
+                ) {
+
+                    modalImage.src = "";
+
+                }
+
+            },
+            300
+        );
+
+    }
+
+
+    closeButton.addEventListener(
+        "click",
+        closeModal
+    );
+
+
+    /* =====================================================
+       CLICK OUTSIDE
+       ===================================================== */
+
+    modal.addEventListener(
+        "click",
+        function (event) {
+
+            if (
+                event.target === modal
+            ) {
+
+                closeModal();
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       ESCAPE KEY
+       ===================================================== */
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (
+                event.key === "Escape" &&
+                modal.classList.contains(
+                    "active"
+                )
+            ) {
+
+                closeModal();
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       OPEN FULL IMAGE
+       ===================================================== */
+
+    fullButton.addEventListener(
+        "click",
+        function () {
+
+            if (!currentImage) {
+                return;
+            }
+
+
+            window.open(
+                currentImage,
+                "_blank",
+                "noopener,noreferrer"
+            );
+
+        }
+    );
+
+
+})();
+
+</script>
 
     <section id="social" class="py-5 bg-dark curtain-reveal" aria-labelledby="social-heading">
       <div class="container">
